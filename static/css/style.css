@@ -1,0 +1,198 @@
+body{
+    margin: 0x;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+#main{
+    width: 100%;
+    position: relative;
+}
+nav{
+    display: flex;
+    box-shadow: 5px 10px 30px rgba(0,0,0,0.2);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #FFFFFF;
+}
+nav .logo{
+    height: 3em;
+    line-height: 3em;
+    border-radius: 0.5em;
+    font-size: medium;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    background:  rgb(0, 255, 200);
+    margin: 0.5em 0.5em 0.5em;   
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    margin-left: 50px;
+}
+nav a{
+    height: 2.5em;
+    line-height: 2.5em;
+    margin: 3px;
+    font-size: 0.8em;
+    display: flex;
+    padding: 0em 5em;
+    text-transform: uppercase;
+    letter-spacing: 2;
+    font-weight: 600;
+    color: #585a5b;
+}
+nav li #cart{
+    padding-left: 50px;
+}
+nav a:hover, nav a:focus{
+    background-color: rgb(0, 255, 200);
+    color: #FFFFFF;
+    box-shadow: 5px 10px 30px rgba(64, 98, 196, 0.3);
+    transition: all ease-in;
+}
+.tech-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.tech-img{
+    width: 50em;
+    height: 50em;
+    margin-top: 5em;
+}
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f7fdc0;   
+}
+
+header h1{
+    font-size: 3.5em;
+    font-family: cursive;
+    color: #1c3548;
+    margin: 0px 0px 10px 0px;
+    line-height: 50px;
+    text-transform: capitalize;
+}
+.heading-text{
+    width: 50em;
+}
+
+.shop,button{
+    width: 9em;
+    margin: 1em;
+    padding-bottom: 1.2em;
+    height: 2.5em;
+    color: #FFFFFF;
+    background-color: #1db096;
+    border: solid 15px;
+    border-color: #1db096;
+    border-radius: 1.5em;
+}
+
+.hover,button:hover{
+    background-color: rgb(0, 255, 200);
+    border-color: rgb(0, 255, 200);
+    box-shadow: 4px 10px 30px rgba(24, 139, 119, 0.2)
+}
+
+.main-text{
+    width: 55em;
+    width: 100%;
+    height: 20%;
+    padding: 2em 0em 2em;
+    text-align: center;
+    background-color: rgb(8, 8, 8);
+    line-height: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}    
+
+.main-text p{
+    color: #747474;
+}
+
+#products-heading span{
+    color: #36b7b5;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1rem;
+}
+
+#products-heading h2{
+    color: #1c3548;
+    font-size: 3.5em;
+    margin: 0px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.products{
+    width: 100%;
+    border-top: 1px solid rgba(5,58,58,0.03);
+    border-top: 1px solid rgba(5,58,58,0.03);
+    padding: 5.5em 0em;
+    background-image:  url("");
+    background-color: #f0f8ff;
+    background-position: center;
+    background-size: 1000px;
+}
+
+#products-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 1.5em 0em;
+}
+section[class="box-container"] div{
+    width: 20em;
+    height: 25em;
+    border-radius: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5em;
+    margin: 1.8em;
+    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+section[class="box-container"] div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section[class="box-container"] div img{
+    width: 9.3em;
+    height: 9.3em;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.products button{
+    text-transform: uppercase;
+    width: fit-content;
+}
+  
