@@ -33,7 +33,7 @@ nav .logo{
     font-weight: 700;
     color: #FFFFFF;
     letter-spacing: 1px;
-    background:  rgb(0, 255, 200);
+    background:  rgb(27, 207, 168);
     margin: 0.5em 0.5em 0.5em;   
 }
 nav ul{
@@ -66,11 +66,11 @@ nav a:hover, nav a:focus{
 .tech-img img{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 .tech-img{
-    width: 50em;
-    height: 50em;
+    width: 30em;
+    height: 30em;
     margin-top: 5em;
 }
 .content{
@@ -78,7 +78,7 @@ nav a:hover, nav a:focus{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #f7fdc0;   
+    background-color: rgb(252, 252, 160);   
 }
 
 header h1{
@@ -126,7 +126,7 @@ header h1{
     color: #747474;
 }
 
-#products-heading span{
+#products-heading h2{
     color: #36b7b5;
     font-weight: 500;
     text-transform: uppercase;
@@ -134,21 +134,21 @@ header h1{
     font-size: 1rem;
 }
 
-#products-heading h2{
+.box-container h3{
     color: #1c3548;
-    font-size: 3.5em;
-    margin: 0px;
+    font-size: 1.5em;
+    text-align: center;
     font-weight: 400;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .products{
     width: 100%;
     border-top: 1px solid rgba(5,58,58,0.03);
-    border-top: 1px solid rgba(5,58,58,0.03);
     padding: 5.5em 0em;
     background-image:  url("");
-    background-color: #f0f8ff;
+    background-color: #f0ffff;
     background-position: center;
     background-size: 1000px;
 }
@@ -166,33 +166,127 @@ header h1{
     flex-wrap: wrap;
     margin: 1.5em 0em;
 }
-section[class="box-container"] div{
-    width: 20em;
-    height: 25em;
+section[class="box-container"]  div{
+    width: 320px;
+    height: 400px;
     border-radius: 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1.5em;
-    margin: 1.8em;
-    box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.08);
+    margin: 1.8em; 
+ 
 }
 
-section[class="box-container"] div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-section[class="box-container"] div img{
-    width: 9.3em;
-    height: 9.3em;
-    border-radius: 50%;
-    object-fit: cover;
+#gadget1{
+    background-image: url('/images/tv.jpg');
+    background-size: cover;
+    background-position: center ;
+    color: #faf5f5;
 }
 
-.products button{
+#gadget2{
+    background-image: url('/images/pixel4a.jpg');
+    background-size: cover;
+    background-position: center ;
+    color: #faf5f5;
+}
+
+#gadget3{
+    background-image: url('/images/ps5.jpg');
+    background-size: cover;
+    background-position: center ;
+    color: #faf5f5;
+}
+
+#gadget4{
+    background-image: url('/images/MacBookpro.jpg');
+    background-size: cover;
+    background-position: center ;
+    color: #faf5f5;
+}
+
+#gadget5{
+    background-image: url('/images/watch.jpg');
+    background-size: cover;
+    background-position: center ;
+    color: #faf5f5;
+}
+
+#gadget6{
+    background-image: url('/images/airpod.jpg');
+    background-size: cover;
+    background-position: center ;
+    color: #faf5f5;
+}
+  
+
+div .price{
+    font-weight: 500;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-transform: uppercase;    
+    opacity: 0;
+} 
+
+div:hover .price{
+    background-color: rgba(0,0,0,0.5);
+    transition: 0.8s;
+    width: 320px;
+    height: 400px;
+    position: absolute;
+    opacity: 1;
+}
+
+div button{
     text-transform: uppercase;
     width: fit-content;
+    opacity: 0;
+}
+
+#gadget1:hover button {
+    position: absolute;
+    top: 1200px;
+    left: 210px;
+    opacity: 1;
+}
+
+#gadget2:hover button {
+    position: absolute;
+    top: 1200px;
+    left: 590px;
+    opacity: 1;
+}
+
+#gadget3:hover button {
+    position: absolute;
+    top: 1200px;
+    left: 970px;
+    opacity: 1;
+}
+
+#gadget4:hover button {
+    position: absolute;
+    top: 1720px;
+    left: 210px;
+    opacity: 1;
+}
+
+#gadget5:hover button {
+    position: absolute;
+    top: 1720px;
+    left: 590px;
+    opacity: 1;
+}
+
+#gadget6:hover button {
+    position: absolute;
+    top: 1720px;
+    left: 970px;
+    opacity: 1;
+}
+
+
+span #lower{
+    text-transform: lowercase;
 }
   
