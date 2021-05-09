@@ -18,6 +18,7 @@ a{
 nav{
     display: flex;
     box-shadow: 5px 10px 30px rgba(0,0,0,0.2);
+    padding-top: 5px;
     position: fixed;
     left: 0;
     top: 0;
@@ -33,9 +34,14 @@ nav .logo{
     font-weight: 700;
     color: #FFFFFF;
     letter-spacing: 1px;
-    background:  rgb(27, 207, 168);
+    background:  #1c3548;
     margin: 0.5em 0.5em 0.5em;   
 }
+
+nav .logo:hover, nav .logo:focus{
+    background-color: #1c3548;
+}
+
 nav ul{
     display: flex;
 }
@@ -54,11 +60,40 @@ nav a{
     font-weight: 600;
     color: #585a5b;
 }
-nav li #cart{
-    padding-left: 50px;
+
+.navigation #cart{
+    font-size: larger;
+    width: 400px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.navigation li i{
+    color: rgb(27, 207, 168);
+    padding: 2px 5px;
+    border: solid #f4f6f7;
+    background-color: #f4f6f7;
+    border-radius: 15px;
+    width: 50px;
+    height: 20px;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+li i:hover{
+    color:  #f4f6f7;
+    background-color: rgb(27, 207, 168);
+    border: rgb(27, 207, 168);
+}
+
+i span{
+    padding-left: 15px;
+}
+
 nav a:hover, nav a:focus{
-    background-color: rgb(0, 255, 200);
+    background-color: rgb(27, 207, 168);
     color: #FFFFFF;
     box-shadow: 5px 10px 30px rgba(64, 98, 196, 0.3);
     transition: all ease-in;
@@ -69,11 +104,10 @@ nav a:hover, nav a:focus{
     object-fit: cover;
 }
 .tech-img{
-    width: 30em;
-    height: 30em;
-    margin-top: 5em;
+    width: 500px;
+    height: 500px;
 }
-.content{
+#content{
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -82,47 +116,57 @@ nav a:hover, nav a:focus{
 }
 
 header h1{
-    font-size: 3.5em;
+    font-size: 4em;
     font-family: cursive;
     color: #1c3548;
-    margin: 0px 0px 10px 0px;
-    line-height: 50px;
+    margin: 200px 0px 0px 0px; 
     text-transform: capitalize;
 }
-.heading-text{
-    width: 50em;
+
+code{
+    color: #1c3548;
+    padding-left: 10px;
 }
 
-.shop,button{
-    width: 9em;
-    margin: 1em;
-    padding-bottom: 1.2em;
-    height: 2.5em;
+.heading-text{
+    width: 310px;
+    height: 800px;
+}
+
+#shop,button{
+    width: 120px;
+    margin: 16px;
+    padding-bottom: 15px;
+    height: 15px;
     color: #FFFFFF;
     background-color: #1db096;
     border: solid 15px;
     border-color: #1db096;
-    border-radius: 1.5em;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.hover,button:hover{
-    background-color: rgb(0, 255, 200);
-    border-color: rgb(0, 255, 200);
+#shop:hover, button:hover{
+    background-color: rgb(45, 252, 207);
+    border-color: rgb(45, 252, 207);
     box-shadow: 4px 10px 30px rgba(24, 139, 119, 0.2)
 }
 
-.main-text{
+
+
+#main-text{
     width: 55em;
     width: 100%;
-    height: 20%;
-    padding: 2em 0em 2em;
+    height: 200px;
+    padding: 70px 0px 70px;
     text-align: center;
     background-color: rgb(8, 8, 8);
     line-height: 2em;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }    
 
-.main-text p{
+#main-text p{
     color: #747474;
 }
 
@@ -134,7 +178,7 @@ header h1{
     font-size: 1rem;
 }
 
-.box-container h3{
+#box-container h3{
     color: #1c3548;
     font-size: 1.5em;
     text-align: center;
@@ -143,11 +187,10 @@ header h1{
     text-transform: uppercase;
 }
 
-.products{
+#products{
     width: 100%;
     border-top: 1px solid rgba(5,58,58,0.03);
     padding: 5.5em 0em;
-    background-image:  url("");
     background-color: #f0ffff;
     background-position: center;
     background-size: 1000px;
@@ -157,16 +200,17 @@ header h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 70px;
 }
 
-.box-container{
+#box-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     margin: 1.5em 0em;
 }
-section[class="box-container"]  div{
+section[id="box-container"]  div{
     width: 320px;
     height: 400px;
     border-radius: 1.5em;
@@ -180,55 +224,79 @@ section[class="box-container"]  div{
 
 #gadget1{
     background-image: url('/images/tv.jpg');
-    background-size: cover;
-    background-position: center ;
-    color: #faf5f5;
 }
 
 #gadget2{
     background-image: url('/images/pixel4a.jpg');
-    background-size: cover;
-    background-position: center ;
-    color: #faf5f5;
 }
 
 #gadget3{
     background-image: url('/images/ps5.jpg');
-    background-size: cover;
-    background-position: center ;
-    color: #faf5f5;
 }
 
 #gadget4{
     background-image: url('/images/MacBookpro.jpg');
-    background-size: cover;
-    background-position: center ;
-    color: #faf5f5;
 }
 
 #gadget5{
     background-image: url('/images/watch.jpg');
-    background-size: cover;
-    background-position: center ;
-    color: #faf5f5;
 }
 
 #gadget6{
     background-image: url('/images/airpod.jpg');
-    background-size: cover;
-    background-position: center ;
-    color: #faf5f5;
 }
   
+#gadget1:hover button {
+    position: fixed;
+    top: 240px;
+}
 
-div .price{
+#gadget2:hover button {
+    position: fixed;
+    top: 240px
+}
+
+#gadget3:hover button {
+    position: fixed;
+    top: 240px
+}
+
+#gadget4:hover button {
+    position: fixed;
+    top: 240px
+}
+
+#gadget5:hover button {
+    position: fixed;
+    top: 240px
+}
+
+#gadget6:hover button {
+    position: fixed;
+    top: 240px
+}
+
+.gadgets{
+    background-size: cover;
+    background-position: center;
+    color: #faf5f5;
+}
+
+.gadgets:hover, #cart i:hover, nav a:hover{
+    box-shadow: 5px 10px 30px rgba(0,0,0,0.1);
+    transition: all ease 0.2s;
+    transform: translatey(-10px);
+}
+
+.gadgets .price{
     font-weight: 500;
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;    
     opacity: 0;
 } 
 
-div:hover .price{
+/* makiking price visible on hover*/ 
+.gadgets:hover .price{
     background-color: rgba(0,0,0,0.5);
     transition: 0.8s;
     width: 320px;
@@ -237,56 +305,19 @@ div:hover .price{
     opacity: 1;
 }
 
-div button{
+/* making button invisible */
+.gadgets button{
     text-transform: uppercase;
     width: fit-content;
-    opacity: 0;
+    opacity: 0;    
 }
 
-#gadget1:hover button {
-    position: absolute;
-    top: 1200px;
-    left: 210px;
+/* making button visible on hover*/
+.gadgets:hover button{
     opacity: 1;
 }
-
-#gadget2:hover button {
-    position: absolute;
-    top: 1200px;
-    left: 590px;
-    opacity: 1;
-}
-
-#gadget3:hover button {
-    position: absolute;
-    top: 1200px;
-    left: 970px;
-    opacity: 1;
-}
-
-#gadget4:hover button {
-    position: absolute;
-    top: 1720px;
-    left: 210px;
-    opacity: 1;
-}
-
-#gadget5:hover button {
-    position: absolute;
-    top: 1720px;
-    left: 590px;
-    opacity: 1;
-}
-
-#gadget6:hover button {
-    position: absolute;
-    top: 1720px;
-    left: 970px;
-    opacity: 1;
-}
-
 
 span #lower{
     text-transform: lowercase;
 }
-  
+   

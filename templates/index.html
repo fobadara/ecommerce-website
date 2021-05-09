@@ -2,47 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>EMS</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/style.css">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/d7d32996a4.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section id="main">
         <nav>
             <a href="#" class="logo">ems</a>
             <ul class="navigation">
-                <li><a href="#">intro</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">shop</a></li>
-                <li id="cart"><img src="" alt="cart"></li>
+                <li><a href="#content">intro</a></li>
+                <li><a href="#main-text">about</a></li>
+                <li><a href="#products">shop</a></li>
+                <li id="cart"><i class="fas fa-cart-plus"><span id="cart-numb">0</span></i></li>
             </ul>
         </nav>
-        <header class="content">
-            <section class="tech-img">
-                <img src="/images/tech.png" alt="An image showing tech gadgets">
+        <header id="content" >
+            <section class="tech-img" id="im">
+                <img src="/images/tech-png.png" alt="An image showing tech gadgets">
             </section>
             <section class="heading-text">
-                <h1>e-millenia tech hub</h1>
+                <h1>the e-millenial tech hub</h1>
                 <code>Your number one spot for anything tech...</code>
                 <br>
-                <button class="shop">Shop now</button>
+                <button id="shop"><a href="#products">Shop now</a></button>
             </section>    
         </header>
-        <aside class="main-text">
+        <aside id="main-text">
             <p> 
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nemo, ipsa nisi provident et molestias officia esse corrupti fugiat, dolorem odio quas illo impedit maiores voluptates eveniet magni reiciendis labore. 
-                Placeat, explicabo fugiat. Ad, corporis. Vel possimus eaque ipsa blanditiis, tenetur nesciunt similique architecto libero. Dignissimos impedit saepe, 
-                commodi non quaerat officiis dolorum ducimus optio at atque odio quasi nostrum architecto necessitatibus harum cupiditate dolores quod, distinctio ad modi cumque delectus error aperiam totam. Architecto officiis at maxime facere omnis!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut maxime voluptate et minus mollitia accusantium animi iure, soluta perspiciatis tempora ullam quod temporibus ex distinctio dolor molestiae, 
+                voluptates officiis quidem cum, suscipit iste? Sit repellat, placeat assumenda repudiandae exercitationem magni! Quaerat, ratione mollitia. Nemo, delectus facilis laboriosam soluta dignissimos sunt cum explicabo minus inventore eius. Consequatur deleniti incidunt modi exercitationem, laboriosam blanditiis 
+                culpa repellendus fugit eum dolorem atque, nisi vel. Accusantium dicta assumenda quis a, corrupti nemo vel ut similique quia perferendis ea nulla ad optio quasi suscipit aspernatur! Voluptatem maiores nam tempore inventore impedit corrupti exercitationem laborum architecto fuga.
             </p>    
         </aside>
-        <main class="products">
+        <main id="products">
             <section id="products-heading">
-                <h2>our gadgets</h2>
+                <h2 id="our-gadgets">our gadgets</h2>
             </section>
-            <section class="box-container">
+            <section id="box-container">
                 <span>
-                    <div id="gadget1">
+                    <div id="gadget1" class="gadgets">
                             <div class="price">
                                 <p>price</p>
                                 <p>#500,000</p>
@@ -52,7 +53,7 @@
                     <h3>samsung tv</h3>
                 </span>
                 <span>
-                    <div id="gadget2">
+                    <div id="gadget2" class="gadgets">
                             <div class="price">
                                 <p>price</p>
                                 <p>#250,000</p>
@@ -62,7 +63,7 @@
                     <h3>pixel 4<span id="lower">a</span></h3>
                 </span>  
                 <span>
-                    <div id="gadget3">
+                    <div id="gadget3" class="gadgets">
                             <div class="price">
                                 <p>price</p>
                                 <p>#300,000</p>
@@ -72,7 +73,7 @@
                     <h3>ps 5</h3>
                 </span>
                 <span>
-                    <div id="gadget4">
+                    <div id="gadget4" class="gadgets">
                             <div class="price">
                                 <p>price</p>
                                 <p>#800,000</p>
@@ -82,7 +83,7 @@
                     <h3>MacBook Pro</h3>
                 </span>
                 <span>
-                    <div id="gadget5">
+                    <div id="gadget5" class="gadgets">
                             <div class="price">
                                 <p>price</p>
                                 <p>#80,000</p>
@@ -92,7 +93,7 @@
                     <h3>Apple Watch Series 5</h3>
                 </span>
                 <span>
-                    <div id="gadget6">
+                    <div id="gadget6" class="gadgets">
                             <div class="price">
                                 <p>price</p>
                                 <p>#50,000</p>
