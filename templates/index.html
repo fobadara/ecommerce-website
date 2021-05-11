@@ -10,18 +10,22 @@
 </head>
 <body>
     <section id="main">
-        <nav>
+        <nav class="nav-box">
             <a href="#" class="logo">ems</a>
-            <ul class="navigation">
-                <li><a href="#content">intro</a></li>
-                <li><a href="#main-text">about</a></li>
-                <li><a href="#products">shop</a></li>
-                <li id="cart"><i class="fas fa-cart-plus"><span id="cart-numb">0</span></i></li>
-            </ul>
+            <input type="checkbox" class="menu-btn" id="menu-btn">
+            <label for="menu-btn" class="menu-icon"><span></span></label>
+            <div class="menu">        
+                <ul class="navigation">
+                    <li class="nav" id="nav1"><a href="#content">intro</a></li>
+                    <li class="nav" id="nav2"><a href="#main-text">about</a></li>
+                    <li class="nav" id="nav3"><a href="#products">shop</a></li>
+                    <li id="cart"><i class="fas fa-cart-plus"><span id="cart-numb">0</span></i></li>
+                </ul>       
+            </div>    
         </nav>
         <header id="content" >
-            <section class="tech-img" id="im">
-                <img src="/images/tech-png.png" alt="An image showing tech gadgets">
+            <section class="tech-img" id="image">
+                <img src="/images/tech-png.png" alt="">
             </section>
             <section class="heading-text">
                 <h1>the e-millenial tech hub</h1>
