@@ -23,13 +23,69 @@
                 </ul>       
             </div>    
         </nav>
+        <section class="form-container" id="form-container">
+            <article id="cart-items">
+                <div class="form-header" id="form-header">
+                    <span id="sn" class="serial-num-head">s/n</span>
+                    <span id="item" class="item-title-head">item</span>
+                    <span id="pric" class="item-price-head">price</span>
+                    <span id="quantity" class="item-quantity-head">quantity</span>
+                    <span class="remove-btn-head"></span>
+                </div>
+            </article>  
+            <div>
+                <form class="form" id="paymentForm">
+                    <input class="input" type="text" id="input_name" placeholder= "Enter your name" value="" required>
+                    <p class="error-message" id="name-error"></p>
+                    <br>
+                    <input class="input" type="email" id="email" minlength="5" placeholder="Your email" required>
+                    <p class="error-message" id="mail-error"></p>
+                    <br>
+                    <input class="input" type="tel" id="tel" placeholder="Your phone number" required>
+                    <p class="error-message" id="phone-error"></p>
+                    <br>
+                    <strong>Total Amount to be Paid</strong>
+                    <p id="amount">0</p>
+                    <div class="button">
+                        <button class="check" type="submit" id="checkout">checkout</button>
+                    </div>
+                </form>
+                <div class="button">
+                    <button id="cont-shop">continue shopping</button>
+                </div>    
+            </div>
+        </section>
+        <section class="summary-page">
+            <article id="summary-header">
+                <h2>Thank you, <span id="customer_name"></span>.Your Order Has been Received</h2>
+            </article>
+            <article id="summary-logo">
+                <img src="/images/check.png" alt="Image showing check mark" id="summary-image">
+            </article>
+            <article id="summary">
+                <div id="summary-title">
+                    <h3>Summary</h3>
+                </div>    
+                <ul class="summary-container">
+                    <div class="summary-top">
+                        <li id="summary-serial-numb">S/N</li>
+                        <li id="summary-items">Items</li>
+                        <li id="summary-quantity">Quantity</li>
+                    </div>
+                    <div class="summary-main"></div>    
+                </ul>
+                <div class="close-button">
+                    <button id="ok-button">OK</button>
+                </div>
+            </article>        
+        </section>
         <header id="content" >
             <section class="tech-img" id="image">
                 <img src="/images/tech-png.png" alt="">
             </section>
             <section class="heading-text">
                 <h1>the e-millenial tech hub</h1>
-                <code>Your number one spot for anything tech...</code>
+                <code>Your number one stop for anything tech...</code>
                 <br>
                 <button id="shop"><a href="#products">Shop now</a></button>
             </section>    
@@ -50,64 +106,70 @@
                     <div id="gadget1" class="gadgets">
                             <div class="price">
                                 <p>price</p>
-                                <p>#500,000</p>
+                                <p class="amount">#500,000</p>
                             </div>    
-                            <button>add to cart</button>  
+                            <button class="add-to-cart">add to cart</button>  
                     </div>  
-                    <h3>samsung tv</h3>
+                    <h3 class="title">samsung tv</h3>
                 </span>
                 <span>
                     <div id="gadget2" class="gadgets">
                             <div class="price">
                                 <p>price</p>
-                                <p>#250,000</p>
+                                <p class="amount">#250,000</p>
                             </div>    
-                            <button>add to cart</button>  
+                            <button class="add-to-cart">add to cart</button>  
                     </div>  
-                    <h3>pixel 4<span id="lower">a</span></h3>
+                    <h3 class="title">pixel 4<span id="lower">a</span></h3>
                 </span>  
                 <span>
                     <div id="gadget3" class="gadgets">
                             <div class="price">
                                 <p>price</p>
-                                <p>#300,000</p>
+                                <p class="amount">#300,000</p>
                             </div>    
-                            <button>add to cart</button>  
+                            <button class="add-to-cart">add to cart</button>  
                     </div>  
-                    <h3>ps 5</h3>
+                    <h3 class="title">ps 5</h3>
                 </span>
                 <span>
                     <div id="gadget4" class="gadgets">
                             <div class="price">
                                 <p>price</p>
-                                <p>#800,000</p>
+                                <p class="amount">#800,000</p>
                             </div>    
-                            <button>add to cart</button>  
+                            <button class="add-to-cart">add to cart</button>  
                     </div>  
-                    <h3>MacBook Pro</h3>
+                    <h3 class="title">MacBook Pro</h3>
                 </span>
                 <span>
                     <div id="gadget5" class="gadgets">
                             <div class="price">
                                 <p>price</p>
-                                <p>#80,000</p>
+                                <p class="amount">#80,000</p>
                             </div>    
-                            <button>add to cart</button>  
+                            <button class="add-to-cart">add to cart</button>  
                     </div>  
-                    <h3>Apple Watch Series 5</h3>
+                    <h3 class="title">Apple Watch Series 5</h3>
                 </span>
                 <span>
                     <div id="gadget6" class="gadgets">
                             <div class="price">
                                 <p>price</p>
-                                <p>#50,000</p>
+                                <p class="amount">#50,000</p>
                             </div>    
-                            <button>add to cart</button>  
+                            <button class="add-to-cart">add to cart</button>  
                     </div>  
-                    <h3>Apple AirPods</h3>
+                    <h3 class="title">Apple AirPods</h3>
                 </span>
             </section>
         </main>
     </section>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="../static/js/ecommerce.js"></script>
 </body>
+<footer id= "footer">
+    <a href="#" class="logo">ems</a>
+    <p>Created and Designed by <a href="https://github.com/fobadara" id="fobadara">Fobadara</a></p>
+</footer>
 </html>
