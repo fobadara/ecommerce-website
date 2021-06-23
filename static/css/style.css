@@ -120,6 +120,10 @@ nav a:hover, nav a:focus, footer a:hover, footer a:focus{
     display: none; 
 }
 
+.is-hidden{
+    display: none;
+}
+
 .form-container #cart-items{
     display: block;
     justify-content: left;
@@ -264,6 +268,7 @@ width: 6em;
 padding: 0.5em;
 font-size: smaller;
 margin-left: 10px;
+
 } 
 
 .button #cont-shop{
@@ -422,7 +427,6 @@ code{
 
 #shop a:visited, #shop a:active{
     color: #FFFFFF;
-    
 }
 
 #shop:hover, button:hover{
@@ -498,56 +502,56 @@ section[id="box-container"]  div{
  
 }
 
-#gadget1{
+#p1{
     background-image: url('/images/tv.jpg');
 }
 
-#gadget2{
+#p2{
     background-image: url('/images/pixel4a.jpg');
 }
 
-#gadget3{
+#p3{
     background-image: url('/images/ps5.jpg');
 }
 
-#gadget4{
+#p4{
     background-image: url('/images/MacBookpro.jpg');
 }
 
-#gadget5{
+#p5{
     background-image: url('/images/watch.jpg');
 }
 
-#gadget6{
+#p6{
     background-image: url('/images/airpod.jpg');
 }
   
-#gadget1:hover button {
+#p1:hover button {
     position: fixed;
     top: 240px;
 }
 
-#gadget2:hover button {
+#p2:hover button {
     position: fixed;
     top: 240px
 }
 
-#gadget3:hover button {
+#p3:hover button {
     position: fixed;
     top: 240px
 }
 
-#gadget4:hover button {
+#p4:hover button {
     position: fixed;
     top: 240px
 }
 
-#gadget5:hover button {
+#p5:hover button {
     position: fixed;
     top: 240px
 }
 
-#gadget6:hover button {
+#p6:hover button {
     position: fixed;
     top: 240px
 }
@@ -600,7 +604,7 @@ span #lower{
 }
 
 .nav-box .menu-btn{
-    opacity: 0;  
+    opacity: 0;   
 }
 
 #footer{
@@ -680,15 +684,15 @@ span #lower{
         margin: 0px;
     }
 
-    .nav-box .menu{
+    .nav-box .nav{
         overflow: hidden;
-        visibility: hidden;
+        display: none; 
         width: 100%;        
     }
     
-    .menu-btn:checked ~ .menu{
-        visibility: visible;
-   
+    .menu-btn:checked~#dropdown .nav{
+        display: block;
+        color: red;
     }
     
     nav #cart{
@@ -709,7 +713,9 @@ span #lower{
         cursor: pointer;
         opacity: 1;   
         z-index: 1;
-        margin-left: 75px; 
+        position: fixed;
+        left: 201px;
+        top: 29px;
     }
 
     .menu-icon{
@@ -737,17 +743,17 @@ span #lower{
         top: 4px;
     }
 
-    .menu-btn:checked + label{
+    .menu-btn:checked~#dropdown  label{
         transform: rotate(135deg);
     }
 
-    .menu-btn:checked + label::before,
-    .menu-btn:checked + label::after{
+    .menu-btn:checked~#dropdown label::before,
+    .menu-btn:checked~#dropdown label::after{
         top: 0;
         transform: rotate(90deg);
     }
 
-    .menu-btn:checked:hover + label{
+    .menu-btn:checked:hover~#dropdown label{
         transform: rotate(225deg);
     }
 

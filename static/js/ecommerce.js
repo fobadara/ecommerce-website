@@ -1,19 +1,28 @@
 let formContainer = document.getElementById("form-container");
 let addToCartButton = document.getElementsByClassName("add-to-cart");
-//display cart when clicked
+//displays and hides cart 
 function popUpForm() {
     let contShop = document.getElementById("cont-shop");
-    contShop.onclick = function closeForm(){
-        document.getElementById("form-container").style.display = "none"; 
-    }
+    let cart = document.getElementById("cart"); 
+    contShop.addEventListener("click", closeForm);
 
-    let cart = document.getElementById("cart");
-    cart.onclick = function openForm(){
-        document.getElementById("form-container").style.display = "block";
+    cart.onclick = function openForm() {
+        formContainer.style.display = "block";
     }
-    return
 }
 popUpForm();
+//hides cart
+function closeForm() {
+    formContainer.style.display = "none"; 
+}
+//hides cart when you click outside it
+function hideForm() {
+    window.addEventListener("click", function(e){
+        if(!e.target.closest(".fas") && !e.target.closest(".form-container") && !e.target.closest(".remove-btn")){ 
+            formContainer.style.display = "none";
+        }
+    })
+}
 //make summary-page invisible
 let summaryPage = document.getElementsByClassName("summary-page")[0];  
 function hideSummary() {
@@ -24,10 +33,25 @@ hideSummary();
 function clickAddToCart() {
     for(let i = 0; i < addToCartButton.length; i++){
         addToCartButton[i].addEventListener("click", getItemDetails);
-        addToCartButton[i].addEventListener("click", insertSerialNumber);   
+        addToCartButton[i].addEventListener("click", insertSerialNumber);
+        addToCartButton[i].addEventListener("click", getRemoveButton);      
+        addToCartButton[i].addEventListener("click", changeText);            
     }    
 }
-clickAddToCart()
+clickAddToCart();
+//make menu bar hidden due to click
+function hideNav() {
+    let menu = document.getElementById("menu-btn");
+    window.addEventListener("click", function(e){
+        if(!e.target.closest("#menu-btn") && !e.target.closest("#dropdown") || e.target.closest("#cart")){
+            menu.checked = false;
+        }
+        else if(e.target.closest("#cart")){
+            menu.checked = true
+        }
+    })
+}
+hideNav();
 //gather details of items to add to cart
 function getItemDetails(event) {
     let button = event.target;
@@ -44,7 +68,6 @@ function addToCart(title, amount,event) {
     
     for(let i = 0; i < cartItemNames.length; i++){
         if(cartItemNames[i].innerText == selectedItemName.innerText){           
-            alert("Item is already present in cart. You can increase the quantity of items in your cart.")
             return
         }            
     }
@@ -71,6 +94,7 @@ function addToCart(title, amount,event) {
     increaseQuantitySmallScreen();      
     decreaseQuantitySmallScreen();
     total();
+    hideForm();
 }
 //add serial number to cart
 function insertSerialNumber() {
@@ -183,17 +207,36 @@ function makeQuantityOne(){
 function clickRemoveButton(){
     let buttonRemove = document.getElementsByClassName("remove-btn");
     for(let i = 0; i < buttonRemove.length; i++){
-        buttonRemove[i].addEventListener('click', removeButton);
+        buttonRemove[i].addEventListener('click', changeText)
+        buttonRemove[i].addEventListener('click', getRemoveButton);
         buttonRemove[i].addEventListener('click', insertSerialNumber);  
     }
 }
+
+function getRemoveButton(event){
+    let button
+    if(event.target.innerHTML == "remove from cart"){
+        let productName = event.target.parentElement.nextElementSibling;
+        let itemsName = document.getElementsByClassName("item-title");
+        for (let i = 0; i < itemsName.length; i++){
+            let rmvButton = itemsName[i].nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+            if (itemsName[i].innerText == productName.innerText){
+                button = rmvButton;
+                removeButton(button);
+            }
+        }
+    }
+    else if(event.target.innerHTML == "REMOVE"){
+        button = event.target;
+        removeButton(button);
+    }    
+}
 //remove item from cart
-function removeButton(event){
-    let button = event.target;
+function removeButton(button){
     let i = 0;
     let container = [].reverse();
     while(i < 8){
-        container.push(button);
+        container.push(button)
         button = button.previousElementSibling;
         i++;
     }
@@ -350,4 +393,22 @@ function payWithPaystack(e) {
     }
   });
   handler.openIframe();
+  closeForm();
+}
+
+//Adding this because I just read the instruction to add it  
+//change add-to-cart button's text
+function changeText(e) {  
+    if(e.target.innerHTML == "add to cart"){
+        e.target.innerHTML = "remove from cart" 
+    }else if(e.target.innerHTML == "remove from cart"){    
+        e.target.innerHTML = "add to cart";
+    }else if(e.target.innerHTML == "REMOVE"){
+        let itemName = e.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling;
+        let productName = document.querySelectorAll(".title");
+        for(let i = 0; i < productName.length; i++){
+            let addToCart = productName[i].previousElementSibling.firstElementChild.nextElementSibling;
+            (productName[i].innertext == itemName.innertext)?  addToCart.innerHTML = "add to cart" : ""
+        } 
+    }
 }
