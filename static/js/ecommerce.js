@@ -315,12 +315,11 @@ function total(){
     let prices = document.getElementsByClassName("item-price")
     let total = 0;
     for(let i = 0; i < prices.length; i++){
-        let price = parseFloat(prices[i].innerText.replace("#", "").replace(",", ""));
+        let price = parseFloat(prices[i].innerText.replace("₦", "").replace(",", ""));
         let quantity = parseFloat(prices[i].nextElementSibling.firstElementChild.nextElementSibling.innerText);
         total = total + (price * quantity)
     }   
-    total = Math.round(total * 100) / 100;
-    document.getElementById("amount").innerText = total;
+    document.getElementById("amount").innerText = `₦${total}`;
 }
 //add event listener to ok button
 function getOkButton() {
@@ -381,7 +380,7 @@ function payWithPaystack(e) {
   let handler = PaystackPop.setup({
     key: 'pk_test_2828353ba6f2a33b6134a2a62293fbabe6156b5b', // Replace with your public key
     email: document.getElementById("email").value,
-    amount: document.getElementById("amount").innerText * 100,
+    amount: document.getElementById("amount").innerText.replace("₦","") * 100,
     ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     // label: "Optional string that replaces customer email"
     onClose: function(){
@@ -408,7 +407,7 @@ function changeText(e) {
         let productName = document.querySelectorAll(".title");
         for(let i = 0; i < productName.length; i++){
             let addToCart = productName[i].previousElementSibling.firstElementChild.nextElementSibling;
-            (productName[i].innertext == itemName.innertext)?  addToCart.innerHTML = "add to cart" : ""
+            (productName[i].innerText == itemName.innerText)?  addToCart.innerHTML = "add to cart" : ""
         } 
     }
 }
