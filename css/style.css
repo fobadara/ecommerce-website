@@ -517,23 +517,23 @@ section[id="box-container"] div {
 }
 
 #p2 {
-  background-image: url("/images/pixel4a.jpg");
+  background-image: url("../images/pixel4a.jpg");
 }
 
 #p3 {
-  background-image: url("/images/ps5.jpg");
+  background-image: url("../images/ps5.jpg");
 }
 
 #p4 {
-  background-image: url("/images/MacBookpro.jpg");
+  background-image: url("../images/MacBookpro.jpg");
 }
 
 #p5 {
-  background-image: url("/images/watch.jpg");
+  background-image: url("../images/watch.jpg");
 }
 
 #p6 {
-  background-image: url("/images/airpod.jpg");
+  background-image: url("../images/airpod.jpg");
 }
 
 #p1:hover button {
