@@ -6,7 +6,8 @@
 
 ||             EMS ||
 |-|-----------------------------------|-|
-||![screenshot](./images/ems.gif)[![Netlify Status](https://api.netlify.com/api/v1/badges/17e4dfb8-0e73-4ad5-a93e-190cad97a1a2/deploy-status)](https://[app.netlify.com/sites/my-ems/deploys](https://my-ems.netlify.app/))(Click to link)||
+||![screenshot](./images/ems.gif)
+[Live Demo](https://my-ems.netlify.app/)||
 
 ||Built With 🔨 ||
 |-|-------------|-|
